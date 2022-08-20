@@ -14,14 +14,14 @@ INEGI. (19 de 08 de 2022). Comunicado de Prensa, Encuesta Nacional sobre Disponi
 
 Pseudocodigo
 
-Inicio
+ Inicio
 Escribir (palabra clave) "INGENIERIA"
 Identificar que: 
 "INGENIERIA" = "@ingenieriastec" (usuario de tiktok)
 Leer sugerencia
 
-Si "la sugerencia fue del agrado del usuario" Entonces "Festeja"
-Si "la sugerencia NO fue del agrado del usuario" Entonces "Se deprime"
+  Si "la sugerencia fue del agrado del usuario" Entonces "Festeja"
+  Si "la sugerencia NO fue del agrado del usuario" Entonces "Se deprime"
 
-FIN
+ FIN
 
