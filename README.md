@@ -12,5 +12,16 @@ Bibliografía
 INEGI. (19 de 08 de 2022). Comunicado de Prensa, Encuesta Nacional sobre Disponibilidad y Uso de Tecnologias de la Informacion. Obtenido de https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2021/OtrTemEcon/ENDUTIH_2020.pdf
 
 
+Pseudocodigo
 
+Inicio
+Escribir (palabra clave) "INGENIERIA"
+Identificar que: 
+"INGENIERIA" = "@ingenieriastec" (usuario de tiktok)
+Leer sugerencia
+
+Si "la sugerencia fue del agrado del usuario" Entonces "Festeja"
+Si "la sugerencia NO fue del agrado del usuario" Entonces "Se deprime"
+
+FIN
 
