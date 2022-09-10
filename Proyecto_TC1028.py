@@ -9,9 +9,9 @@ Computacion=0
 Quimica=0
 
 
-print("####################Analizador########################")
 
-print(Matematicas_Fisica)
+
+print("####################Analizador########################")
 
 entrada1 = input(f"pregunta 1: De las siguientes materias cual es tu favorita: \n\n\t\tMatematicas-Fisica\n\t\tComputación\n\t\tQuimica\n\nRespuesta: ")
 os.system("cls")
@@ -30,14 +30,18 @@ os.system("cls")
 entrada8 = input(f"pregunta 8: ¿Eres de un aprendizaje mas visual, emocional o asociativo? ")
 os.system("cls")
 
+def pregunta1(entrada1):
+    if(entrada1 =='Matematicas-Fisica'):
+        Matematicas_Fisica=10
+        puntajetotal_pregunta1=10
+    elif (entrada1 =='Computacion'): 
+        Computacion = 20
+        puntajetotal_pregunta1=20
+    elif (entrada1 =='Quimica'):
+        Quimica = 30
+        puntajetotal_pregunta1=30
+    
+    return puntajetotal_pregunta1
 
-if(entrada1 =='Matematicas-Fisica'):
-     Matematicas_Fisica=10
-elif (entrada1 =='Computacion'): 
-    Computacion = 20
-elif (entrada1 =='Quimica'):
-    Quimica = 30
-
-
-print(Matematicas_Fisica)
+print(pregunta1('Computacion'))
 
