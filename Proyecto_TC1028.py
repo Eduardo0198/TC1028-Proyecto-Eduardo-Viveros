@@ -3,6 +3,8 @@
 
 print("####################Analizador########################")
 
+print("####################Analizador Lucas########################")
+
 entrada1 = input(f"pregunta 1: ¿Cual es tu materia favorita? ")
 entrada2 = input(f"pregunta 2: ¿Te gustaria estudiar una ingenieria? ")
 entrada3 = input(f"pregunta 3: ¿Cual crees que sea tu mejor fortaleza: analisis, liderazgo o productividad?" )
