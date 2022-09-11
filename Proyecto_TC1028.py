@@ -6,7 +6,7 @@ import os
 
 print("####################Analizador########################")
 
-entrada1 = input(f"pregunta 1: De las siguientes materias cual es tu favorita: \n\n\t\tMatematicas-Fisica\n\t\tComputación\n\t\tQuimica\n\nRespuesta: ")
+entrada1 = input(f"pregunta 1: De las siguientes materias cual es tu favorita: \n\n\t\tMatematicas-Fisica\n\t\tComputacion\n\t\tQuimica\n\nRespuesta: ")
 os.system("cls")
 entrada2 = input(f"pregunta 2: ¿Te gustaria estudiar una ingenieria? ")
 os.system("cls")
