@@ -3,13 +3,6 @@
 
 import os
 
-#Declaración de las variables
-Matematicas_Fisica=0
-Computacion=0
-Quimica=0
-
-
-
 
 print("####################Analizador########################")
 
@@ -30,18 +23,22 @@ os.system("cls")
 entrada8 = input(f"pregunta 8: ¿Eres de un aprendizaje mas visual, emocional o asociativo? ")
 os.system("cls")
 
-def pregunta1(entrada1):
+def pregunta_totales(entrada1,entrada2):
     if(entrada1 =='Matematicas-Fisica'):
-        Matematicas_Fisica=10
-        puntajetotal_pregunta1=10
+        respuesta1=10
     elif (entrada1 =='Computacion'): 
-        Computacion = 20
-        puntajetotal_pregunta1=20
+        respuesta1 = 20
     elif (entrada1 =='Quimica'):
-        Quimica = 30
-        puntajetotal_pregunta1=30
+        respuesta1 = 30
+            
+    if(entrada2 =='si'or 'Si' or 'Si'):
+        respuesta2=10
+    elif (entrada2 =='No' or 'no' or 'No'): 
+        respuesta2 = 20
     
-    return puntajetotal_pregunta1
+    puntajetotal=respuesta1+respuesta2
+    
+    return puntajetotal
 
-print(pregunta1('Computacion'))
+print(pregunta_totales(entrada1,entrada2))
 
