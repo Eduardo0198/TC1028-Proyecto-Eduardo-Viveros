@@ -15,15 +15,8 @@ if (entrada1 == "2" or "dos"):
 elif (entrada1 == "3" or "tres"):
     respuesta1 = 30 
 
-
-
 print(f"El valor de respuesta1 es: {respuesta1}")
     
-
-
-
-
-"""
 """""
 entrada2 = input(f"pregunta 2: Para ti ¿Que es la ingenieria?: \n\n\t1. Es el poder crear cosas atarves de la indrustria\n\n\t2. Es el saber como funcionan los aparatos electronicos por dentro\n\n\t3. Es el poder crear soluciones a porblemas atraves de un laboratorio \n\nRespuesta: ")
 os.system("cls")
