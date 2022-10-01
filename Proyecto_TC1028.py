@@ -1,6 +1,6 @@
-
-#Proyecto TC1028
-
+"""
+Proyecto TC1028
+"""
 import os
 
 
@@ -96,14 +96,17 @@ elif (entrada8 == "3" or "tres"):
     respuesta8 = 30
     
 puntaje_total = int(respuesta1+respuesta2+respuesta3+respuesta4+respuesta5+respuesta6+respuesta7+respuesta8)
-""""" 
-# return int (puntaje_total)
+
+
+"""""
+""" 
+ return int (puntaje_total)
 
 
 
 
-#print("######## Resultado del analizador #########")
-#print(pregunta_totales(entrada1,entrada2,entrada3,entrada4,entrada5,entrada6,entrada7,entrada8))
+rint("######## Resultado del analizador #########")
+print(pregunta_totales(entrada1,entrada2,entrada3,entrada4,entrada5,entrada6,entrada7,entrada8))
 
-
+"""
 
