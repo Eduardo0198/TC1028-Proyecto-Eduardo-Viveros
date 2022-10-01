@@ -8,16 +8,14 @@ print("#################### ANALIZADoR DE CARRERAS ########################")
 
 entrada1 = input(f"pregunta 1: De las siguientes materias ¿Cual es tu favorita?: \n\n\t\t1. Matematicas-Fisica\n\t\t2. Computacion\n\t\t3. Quimica\n\nRespuesta: ")
 
-while (entrada1 != 1 or entrada1 != "uno" or entrada1 !=  12 or entrada1 != "dos" or entrada1 != 3 or entrada1 != "tres"):
-    entrada1 = input(f"pregunta 1: De las siguientes materias ¿Cual es tu favorita?: \n\n\t\t1. Matematicas-Fisica\n\t\t2. Computacion\n\t\t3. Quimica\n\nRespuesta: ")
-
-
-if(entrada1 == "1" or "uno"):
-    respuesta1 = 10
-elif (entrada1 == "2" or "dos"): 
+While = (entrada1 == "1" or "uno"):
+respuesta1 = 10
+if (entrada1 == "2" or "dos"): 
     respuesta1 = 20
 elif (entrada1 == "3" or "tres"):
     respuesta1 = 30 
+
+
 
 print(f"El valor de respuesta1 es: {respuesta1}")
     
@@ -26,7 +24,7 @@ print(f"El valor de respuesta1 es: {respuesta1}")
 
 
 """
-
+"""""
 entrada2 = input(f"pregunta 2: Para ti ¿Que es la ingenieria?: \n\n\t1. Es el poder crear cosas atarves de la indrustria\n\n\t2. Es el saber como funcionan los aparatos electronicos por dentro\n\n\t3. Es el poder crear soluciones a porblemas atraves de un laboratorio \n\nRespuesta: ")
 os.system("cls")
 entrada3 = input(f"pregunta 3: ¿Cual crees que sea tu mejor fortaleza?: \n\n\t1. Analisis\n\n\t2. Control bajo estres\n\n\t3. Trabajo en equipo\n\nRespuesta: " )
@@ -43,7 +41,7 @@ entrada8 = input(f"pregunta 8: ¿Eres de un aprendizaje mas visual, emocional o 
 os.system("cls")
 
 #def pregunta_totales(entrada1,entrada2,entrada3,entrada4,entrada5,entrada6,entrada7,entrada8):
-    1
+    
 
             
 if(entrada2 == "1" or "uno"):
@@ -105,7 +103,7 @@ elif (entrada8 == "3" or "tres"):
     respuesta8 = 30
     
 puntaje_total = int(respuesta1+respuesta2+respuesta3+respuesta4+respuesta5+respuesta6+respuesta7+respuesta8)
-    
+""""" 
 # return int (puntaje_total)
 
 
@@ -116,5 +114,3 @@ puntaje_total = int(respuesta1+respuesta2+respuesta3+respuesta4+respuesta5+respu
 
 
 
-"""
-    
