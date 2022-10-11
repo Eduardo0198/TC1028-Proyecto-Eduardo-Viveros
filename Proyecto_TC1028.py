@@ -8,8 +8,7 @@ la en varias funciones
 """
 global lista
 lista=[]
-global lista_pregntas
-lista_preguntas=[]
+
 #================== funciones auxiliares  =============================
 """
 Defini varias funciones que estaria ocupando a lo largo de todo mi codi-
@@ -181,7 +180,6 @@ os.system("cls")
 while pregunta_10 >= "4":
     print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
     os.system("cls")
-
 contador_respuestas(valor_preguntas(pregunta_10))
 pausa()
 
@@ -213,12 +211,21 @@ contador_respuestas(valor_preguntas(pregunta_13))
 pausa()
 
 total()
+      
+
+def indicador_de_carrera ():
+   global lista
+   puntaje=0
+   for i in lista:
+      puntaje=puntaje+i
+   if puntaje <= 130:
+      print ("Tengo tres opciones para ti,\n1. Ingeniero Mecanico,\n2. Ingeniero Aeronautica,\n3. Ingeniero Mecatronico")
+   elif puntaje <= 260:
+        print ("Tengo tres opciones para ti,\n1. Ingeniero en Robotica y Sitesmas,\n2. Ingeniero en Sistemas Computacionales, 3. Ingeniero en Electronica")
+   elif puntaje <= 390:
+        print ("Tengo tres opciones para ti,\n1. Ingeniero Quimico,\n2. Ingeniero en Biotecnologia,\n 3. Ingeniero en Alimentos")
+   return puntaje
+
+indicador_de_carrera()
 
 
-lista_preguntas=["pregunta1", "pregunta2", "pregunta_3", "pregunta_4", "pregunta_5", "pregunta_6", "pregunta_7", "pregunta_8"," pregunta_9", "pregunta_10", "pregunta_11", "pregunta_12", "pregunta_13"]
-
-def acum (lista1,lista2):
-    lista=[[lista1],[lista2]]
-    return lista
-
-acum (contador_respuestas(valor_preguntas(pregunta_1)), lista_preguntas )
