@@ -1,231 +1,278 @@
-("####### PROYECTO TC1028 ########")
+       
+"############ PROYECTO TC1028 #############"
+
+#Biblioteca
 import os
 
-#================== Variables Globales  ===============================
 """
-Defino una lista global para poder tener libertidad a la hora de ocupar-
-la en varias funciones
-"""
-global lista
-lista=[]
-
-#================== funciones auxiliares  =============================
-"""
-Defini varias funciones que estaria ocupando a lo largo de todo mi codi-
-go, al ser un test con varias preguntas el proceso de estas se repetiria, 
-de esta manera siento que es mejor hacer funciones con instrucciones mas 
-generales para que la funcion aplique co distintos parametros
-"""
-def valor_preguntas (entrada):
-
- if entrada == "1":
-    res = 10
- elif entrada == "2":
-    res = 20
- elif entrada == "3":
-    res = 30
-
- return res 
-
-"""
-La funcion valor_preguntas le asigna un valor a cada respuesta dependien-
-do que string reciba
+=================== funciones auxiliares  ==============================
 """
 
-def contador_respuestas(respuestas):
-   global lista
-   lista.append(respuestas)       
-   print("Tu resultado es: \t", lista)
+def valida_respuesta(numero):
+    """
+   (uso de funciones y ciclos)
+   recibe: numero
+   La funcion comienza con un input donde tienes que ingresar el numero 
+   de opcion que quieras, este input se va a encargar de convertir el
+   string en un entero, para asi poder crear una condicion con ciclo 
+   while, siendo que mientras que metas un numero mayor o igual a 4, el
+   ciclo te va regresar hasta que cumplas con la condicion.
+    """
+    numero = int(input("\nIngresa el numero de la opcion que deseas: "))
+    
+    while (numero >=4  or numero == 0):
+      print("\n\nRespuesta incorrecta intenta de nuevo \n\t.·¯`(>▂<)´¯·.")
+      
+    numero = int(input("\nIngresa el numero de la opcion que deseas: "))
+    
+    return numero
+
+def valor_res (respuesta):
+    """
+    (uso de funciones, condicionales y operadores boleanos)
+    recibe: respuesta
+    la funcion ocupa el entero del 1 al 3 que recibe como parametro,
+    para poder asignarle un valor a dicho numero con los condicionales, 
+    siendo 1 igual 10, 2 igual a 20, 3 igual a 30, para al final solo 
+    retornar el valor de la respuesta.
+    """
+    if respuesta == 1:
+       res = 10
+    
+    elif respuesta == 2:
+       res = 20
+    
+    elif respuesta == 3:
+       res = 30
+    
+    else: 
+       res= 0
+    
+    return res
+
+
+def contador_respuestas(res):
+   """
+   (uso de funciones y listas)
+   recibe: res
+   La funcion recibe los valores de las respuestas, estos mismo se van ir
+   acumulando dentro de una lista, cabe aclarar que esta lista se va ir 
+   actualizando conforme el usuario vaya llenando el analizador, esto lo 
+   logre al declarar una lista sin elementos arriba del main, por lo tanto
+   lo que nos va retornar esta funcion, es una lista de 13 datos que son
+   producto de las 13 preguntas.
+   """
+   lista.append(res)       
+
    return lista
-"""
-La funcion contador_respuestas se encarga de meter los valores de las res-
-puestas, adjunta todos esos valores en un lista global (esta la ocupe para
-tener una misma  variable que pueda ocupar en diferentes funciones), a es-
-ta solo le agregue .append para agregar los valores de la funcion pasada, 
-aparte de que esta te va mostrando el valor de la respuesta que hayas metido.
-"""
-def total ():
-   global lista
+
+
+def total (lista):
+   """
+   (uso de funciones, listas y ciclos)
+   recibe: Lista
+   La funcion recibe una lista de 13 elementos, con ciclo for me encargue
+   que este fuera sumando toda la lista dato por dato, logre esto al 
+   usar un acumulador con el nombre "total" y usando "i" como una variable 
+   que fuera recorriendo la lista. Esta funcion se mandara a llamar la final
+   del main, es por eso que ocupo el print, para que el usuario pueda 
+   visualizar su resultado.
+   """
    total=0
    for i in lista:
       total=total+i
     
    print("\t (⌐■_■) El total de puntos es: \t", total)
+   
    return total
 
-"""
-La funcion total se encarga de sumar los valores de la lista global, suma 
-estos elemtos atraves de un ciclo for y un acumulador, para que al final
-te indique cual es tu resultado final.
-"""
 
-#==================Funcion Auxiliar==================
+
+def indicador_de_carrera (total):
+    """
+    (uso de funciones y condicionales)
+    recibe: total
+    La funcion ocupa el total para poder definir a que ingenieria vas,
+    recordemos que este total es la suma del valor de tus 13 preguntas, por
+    lo tanto comparamos los posibles valores que te pudieron salir, como
+    son 13 preguntas y las posibles respuestas son 1 = 10, 2 = 20 y 3 = 30, 
+    siendo que las respuestas 1 son directamente relacionadas con ingenieria 
+    mecanica y mecatronica, las respuestas 2 son directamenente relacionadas con 
+    el area de sistemas y las respuestas 3 son directamente relacionadas con el
+    area de bioingenierias.
+    """
+    if total <= 130:
+       print ("""\t\nTengo tres opciones para ti:\n\n\t
+                     1. Ingeniero Mecanico\n\n\t 
+                     2. Ingeniero Aeronautica\n\n\t
+                     3. Ingeniero Mecatronico\n""")
+    
+    elif total <= 260:
+         print ("""\t\nTengo tres opciones para ti:\n\n\t
+                       1. Ingeniero en Robotica y Sitesmas\n\n\t
+                       2. Ingeniero en Sistemas Computacionales \n\n\t
+                       3. Ingeniero en Electronica\n""")
+    
+    elif total <= 390:
+         print ("""\t\nTengo tres opciones para ti:\n\n\t
+                       1. Ingeniero Quimico,\n\n\t
+                       2. Ingeniero en Biotecnologia,\n\n\t
+                       3. Ingeniero en Alimentos\n""")
+                     
+    return total
 
 def pausa ():
-    reset = input("Presiona cualquier boton para pasar a la siguiente pregunta (☞ﾟヮﾟ)☞")
+    """
+    (uso de funciones)
+    Sin parametro.
+    La funcion introduce un input para tener una pequeña pausa entre pregunta.
+    """
+    reset = input("\nPresiona enter para poder continuar(☞ﾟヮﾟ)☞")
+    
     os.system("cls")
+
+#Diccionario de preguntas
+   
+"""
+(uso de diccionarios o lista anidada)
+Esta orginalmente seria una lista anidada llena de mis preguntas que se irian
+imprimiendo a lo largo del analizador, incluso considere la idea de hacer una 
+lista normal llena de variables, estas variables serian el string de la pregunta,
+pero analizando mejor el problema conclui que un diccionario arreglaria mejor
+el problema, la forma algo peculiar de imprimir es por que tuve que acomodar 
+los prints en base al formato. Los datos dentro del diccionario se mandan a 
+llamar en el cuerpo cuerpo del progrmama.
+"""
+
+preguntas_dicc = {
+       
+        1 :"""Pregunta 1:\n ¿Cual es tu materia favorita?:\n\t
+              1. Matematicas-Fisica\n\t
+              2. Computacion\n\t
+              3. Quimica\n""",
+        2 :"""Pregunta 2:\nPara ti ¿Que es la ingenieria?:\n\t
+              1. Es el poder crear cosas atarves de 
+                 la indrustria\n\t
+              2. Es el saber como funcionan los aparatos 
+                 por dentro\n\t
+              3. Es el poder crear soluciones a porblemas 
+                 atraves de un laboratorio \n\n""",
+        3 :"""Pregunta 3:\n¿Cual es tu mayor fortaleza?:\n\t
+              1. Analisis\n\t
+              2. Control bajo estres\n\t
+              3. Trabajo en equipo\n\n""",
+        4 :"""Pregunta 4:\n¿En que area te gustaria trabajr?:\n\t
+              1. Mecatronica y Robotica\n\t
+              2. Tecnologias Computacionales\n\t
+              3. Bioingenierias\n\n""",
+        5 :"""Pregunta 5:\n¿cual es tu nivel en mate y fisica:\n\t
+              1. Incipiente\n\t
+              2. Solido\n\t
+              3. Destacado\n\n""",
+        6 :"""Pregunta 6:\n¿En que empresa te ves trabajando?:\n\t
+              1. Manufactura y diseño mecanico\n\t
+              2. Big TECH\n\t
+              3. Industria Aliemtaria\n\n""",
+        7 :"""Pregunta 7:\n¿Que palabra te identifica mas?:\n\t
+              1. Analitico\n\t
+              2. Creativo\n\t
+              3. Ingenioso\n\n""",
+        8 :"""Pregunta 8:\nEres de una aprendizaje mas......:\n\t
+              1. Visual\n\t
+              2. Practico\n\t
+              3. Asociativo\n\n""",
+        9 :"""Pregunta 9:\n¿Sientes gusto por la electronica?:\n\t
+              1. Es algo que me encanta\n\t
+              2. Me llama la atencion\n\t
+              3. No me interesa \n\n""",
+        10 :"""Pregunta 10:\nTrabajar con alimentos, me.....\n\t
+               1. Me aburriria\n\t
+               2. Me llama la atencion\n\t
+               3. Me encantaria \n\n""",
+        11 :"""Pregunta 11:\n¿Disfrutas hacer experimentos?:\n\t
+               1. Poco\n\t
+               2. Mas o memnos\n\t
+               3. Bastante\n\n""",
+        12 :"""Pregunta 12:\n¿Te sie?:\n\t
+               1. Poco\n\t
+               2. Mucho\n\t
+               3. Bastante\n\n""",
+        13 :"""Pregunta 13:\n¿?:\n\t
+               1. No me veo trabajando con tecnologia\n\t
+               2. Me llama la atencion pero no estoy seguro\n\t
+               3. Me gustaria dedicarme a eso \n\n"""
+}
+"""
+============================ Variables ===========================
+"""
+
+lista = []
 
 """
-La funcion pausa solo es un pequeño intermedio entre pregunta y pregunta
+====================== Cuerpo del programa =======================
 """
 
-#==================Cuerpo del programa==================
+print("\n\t\t        BIENVENIDO AL")  
+n = ("\n\t(*￣3￣) analizador de ingenierias ( ͡° ͜ʖ ͡°)")
+print(n.upper())
+print("""
+  \n       DONDE TE ORIENTAREMOS A DECIDIR CUAL ES LA MEJOR 
+   CARRERA PARA TI POR FAVOR CONTESTA LAS SIGUIENTES PREGUNTAS \n\n""")
 
-print("\n\t\t\t\t\tBIENVENIDO AL")
-Nombre_del_proyecto = ("\n\t\t\t(*￣3￣) analizador de ingenierias\t( ͡° ͜ʖ ͡°)")
-print(Nombre_del_proyecto.upper())
-print("\n\n(★‿★) DONDE TE ORIENTAREMOS A DECIDIR CUAL ES LA MEJOR CARRERA PARA TI POR FAVOR CONTESTA LAS SIGUIENTES PREGUNTAS (●'◡'●)\n\n")
 
-
-pregunta_1 = input("Pregunta 1: \nDe las siguientes materias ¿Cual es tu favorita?: \n\n\t\t1. Matematicas-Fisica\n\t\t2. Computacion\n\t\t3. Quimica\n\nRespuesta: ")
-os.system("cls")
-while pregunta_1 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_1=input("Pregunta 1: \nDe las siguientes materias ¿Cual es tu favorita?: \n\n\t\t1. Matematicas-Fisica\n\t\t2. Computacion\n\t\t3. Quimica\n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_1))
-
-pausa()
-"""
-En esta parte el While crea un ciclo que te regresa a la misma pregunta si 
-es que no se cumple la condicion.
-Abajo del while se ve como invoco las funciones anteriormente definidas para
-poder ir acumulando los valores de las respuestas en la lista global y abajo
-de esa la funcion pausa para dar el intermedio entre pregunta y pregunta
-(Este mismo proceso se repetira con las 13 preguntas que conforman al test)
-
-"""
-pregunta_2 = input("Pregunta 2: \nPara ti ¿Que es la ingenieria?: \n\n\t1. Es el poder crear cosas atarves de la indrustria\n\n\t2. Es el saber como funcionan los aparatos electronicos por dentro\n\n\t3. Es el poder crear soluciones a porblemas atraves de un laboratorio \n\nRespuesta: ")
-os.system("cls")
-while pregunta_2 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_2 = input("Pregunta 2: \nPara ti ¿Que es la ingenieria?: \n\n\t1. Es el poder crear cosas atarves de la indrustria\n\n\t2. Es el saber como funcionan los aparatos electronicos por dentro\n\n\t3. Es el poder crear soluciones a porblemas atraves de un laboratorio \n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_2))
+print(preguntas_dicc[1])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_3 = input(f"pregunta 3: ¿Cual crees que sea tu mejor fortaleza?: \n\n\t1. Analisis\n\n\t2. Control bajo estres\n\n\t3. Trabajo en equipo\n\nRespuesta: " )
-os.system("cls")
-while pregunta_3 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_3 = input(f"pregunta 3: ¿Cual crees que sea tu mejor fortaleza?: \n\n\t1. Analisis\n\n\t2. Control bajo estres\n\n\t3. Trabajo en equipo\n\nRespuesta: " )
-   os.system("cls")
 
-contador_respuestas(valor_preguntas(pregunta_3))
+print(preguntas_dicc[2])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_4 = input("pregunta 4: ¿En que area Ingenieril te gustaria desempeñarte?: \n\n\t1. Mecatronica y Robotica\n\n\t2. Tecnologias Computacionales\n\n\t3. Bioingenierias\n\nRespuesta: ")
-os.system("cls")
-while pregunta_4 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_4 = input("pregunta 4: ¿En que area Ingenieril te gustaria desempeñarte?: \n\n\t1. Mecatronica y Robotica\n\n\t2. Tecnologias Computacionales\n\n\t3. Bioingenierias\n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_4))
+print(preguntas_dicc[3])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_5 = input("pregunta 5: Del 1 al 3 ¿Como es tu desempeño en las materias fisico-matematicas?: \n\n\t- 1\n\n\t- 2\n\n\t- 3 \n\nRespuesta: ") 
-os.system("cls")
-while pregunta_5 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_5 = input("pregunta 5: Del 1 al 3 ¿Como es tu desempeño en las materias fisico-matematicas?: \n\n\t- 1\n\n\t- 2\n\n\t- 3 \n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_5))
+print(preguntas_dicc[4])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_6 = input("pregunta 6: ¿En que tipo de industria te ves trabajando en un futuro?: \n\n\t1. Manufactura y diseño mecanico\n\n\t2. Big TECH\n\n\t3. Aeroespacial\n\nRespuesta: ")
-os.system("cls")
-while pregunta_6 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_6 = input("pregunta 6: ¿En que tipo de industria te ves trabajando en un futuro?: \n\n\t1. Manofuctura y diseño mecanico\n\n\t2. Big TECH\n\n\t3. Aeroespacial\n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_6))
+print(preguntas_dicc[5])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_7 = input("pregunta 7: ¿Con cual de las siguientes palabras te identificas: analitico, creativo o ingenioso?: \n\n\t1. Analitico\n\n\t2. Creativo\n\n\t3. Ingenioso\n\nRespuesta: ")
-os.system("cls")
-while pregunta_7 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_7 = input("pregunta 7: ¿Con cual de las siguientes palabras te identificas: analitico, creativo o ingenioso?: \n\n\t1. Analitico\n\n\t2. Creativo\n\n\t3. Ingenioso\n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_7))
+print(preguntas_dicc[6])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_8 = input("pregunta 8: ¿Eres de un aprendizaje mas visual, emocional o asociativo?: \n\n\t1. Visual\n\n\t2. Emocional\n\n\t3. Asociativo\n\nRespuesta: ")
-os.system("cls")
-while pregunta_8 >= "4":
-   print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-   pregunta_8 = input("pregunta 8: ¿Eres de un aprendizaje mas visual, emocional o asociativo?: \n\n\t1. Visual\n\n\t2. Emocional\n\n\t3. Asociativo\n\nRespuesta: ")
-   os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_8))
-pausa() 
-
-pregunta_9 = input("pregunta 9: ¿Sientes interes por la electronica y los componentes de las maquinas?: \n\n\t1. Es algo que me encanta \n\n\t2. Me llama la atencion \n\n\t3. No me interesa \n\nRespuesta: ")
-os.system("cls")
-while pregunta_9 >= "4":
-    print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-    os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_9))
+print(preguntas_dicc[7])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_10 = input("pregunta 10: ¿Trabajando en calidad de alimentos?: \n\n\t1. Me aburriria \n\n\t2. Me llama la atencion \n\n\t3. Me encantaria \n\nRespuesta: ")
-os.system("cls")
-while pregunta_10 >= "4":
-    print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-    os.system("cls")
-contador_respuestas(valor_preguntas(pregunta_10))
+print(preguntas_dicc[8])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_11 = input("pregunta 11: ¿Disfrutas hacer experimentos con distintas sustancias?: \n\n\t1. Poco\n\n\t2. Mas o memnos \n\n\t3. Bastante\n\nRespuesta: ")
-os.system("cls")
-while pregunta_11 >= "4":
-    print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-    os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_11))
+print(preguntas_dicc[9])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_12 = input("pregunta 12: ¿Te sientes capacitado para contribuir a un mejor rendimiento en la empresa?: \n\n\t1. Poco\n\n\t2. Mucho\n\n\t3. Bastante\n\nRespuesta: ")
-os.system("cls")
-while pregunta_12 >= "4":
-    print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-    os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_12))
+print(preguntas_dicc[10])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-pregunta_13 = input("pregunta 13: ¿Te interesa aprender como una maquina interactua con un humano?: \n\n\t1. No me veo trabajando con tecnologia \n\n\t2. Me llama la atencion, pero prefiero estar en otra rama de la industria\n\n\t3. Me gustaria dedicarme a eso \n\nRespuesta: ")
-os.system("cls")
-while pregunta_13 >= "4":
-    print("\t\t\tRespuesta incorrecta intenta de nuevo  \n\t\t\t\t.·´¯`(>▂<)´¯`·.\n")
-    os.system("cls")
-
-contador_respuestas(valor_preguntas(pregunta_13))
+print(preguntas_dicc[11])
+contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
-total()
-      
+print(preguntas_dicc[12])
+contador_respuestas(valor_res(valida_respuesta()))
+pausa()
 
-def indicador_de_carrera ():
-   global lista
-   puntaje=0
-   for i in lista:
-      puntaje=puntaje+i
-   if puntaje <= 130:
-      print ("Tengo tres opciones para ti,\n1. Ingeniero Mecanico,\n2. Ingeniero Aeronautica,\n3. Ingeniero Mecatronico")
-   elif puntaje <= 260:
-        print ("Tengo tres opciones para ti,\n1. Ingeniero en Robotica y Sitesmas,\n2. Ingeniero en Sistemas Computacionales, 3. Ingeniero en Electronica")
-   elif puntaje <= 390:
-        print ("Tengo tres opciones para ti,\n1. Ingeniero Quimico,\n2. Ingeniero en Biotecnologia,\n 3. Ingeniero en Alimentos")
-   return puntaje
+print(preguntas_dicc[13])
+contador_respuestas(valor_res(valida_respuesta()))
+pausa()
 
-indicador_de_carrera()
 
+indicador_de_carrera(total(lista))
 
