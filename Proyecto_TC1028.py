@@ -62,9 +62,9 @@ def contador_respuestas(res):
    lo que nos va retornar esta funcion, es una lista de 13 datos que son
    producto de las 13 preguntas.
    """
-   lista.append(res)       
+   lista_resultados.append(res)       
 
-   return lista
+   return lista_resultados
 
 
 def total (lista):
@@ -109,14 +109,14 @@ def indicador_de_carrera (total):
     
     elif total <= 260:
          print ("""\t\nTengo tres opciones para ti:\n\n\t
-                       1. Ingeniero en Robotica y Sitesmas\n\n\t
+                       1. Ingeniero en Robotica y Sistemas\n\n\t
                        2. Ingeniero en Sistemas Computacionales \n\n\t
                        3. Ingeniero en Electronica\n""")
     
     elif total <= 390:
          print ("""\t\nTengo tres opciones para ti:\n\n\t
-                       1. Ingeniero Quimico,\n\n\t
-                       2. Ingeniero en Biotecnologia,\n\n\t
+                       1. Ingeniero Quimico\n\n\t
+                       2. Ingeniero en Biotecnologia\n\n\t
                        3. Ingeniero en Alimentos\n""")
                      
     return total
@@ -125,7 +125,8 @@ def pausa ():
     """
     (uso de funciones)
     Sin parametro.
-    La funcion introduce un input para tener una pequeña pausa entre pregunta.
+    La funcion introduce un input para tener una pequeña pausa entre pregunta,
+    aparte de que la funcion os.sytem se encarga de limpiar la pantalla.
     """
     reset = input("\nPresiona enter para poder continuar(☞ﾟヮﾟ)☞")
     
@@ -161,11 +162,11 @@ preguntas_dicc = {
               1. Analisis\n\t
               2. Control bajo estres\n\t
               3. Trabajo en equipo\n\n""",
-        4 :"""Pregunta 4:\n¿En que area te gustaria trabajr?:\n\t
+        4 :"""Pregunta 4:\n¿En que area te gustaria trabajar?:\n\t
               1. Mecatronica y Robotica\n\t
               2. Tecnologias Computacionales\n\t
               3. Bioingenierias\n\n""",
-        5 :"""Pregunta 5:\n¿cual es tu nivel en mate y fisica:\n\t
+        5 :"""Pregunta 5:\n¿Cual es tu nivel en mate y fisica:\n\t
               1. Incipiente\n\t
               2. Solido\n\t
               3. Destacado\n\n""",
@@ -177,7 +178,7 @@ preguntas_dicc = {
               1. Analitico\n\t
               2. Creativo\n\t
               3. Ingenioso\n\n""",
-        8 :"""Pregunta 8:\nEres de una aprendizaje mas......:\n\t
+        8 :"""Pregunta 8:\nEres de un aprendizaje mas.......\n\t
               1. Visual\n\t
               2. Practico\n\t
               3. Asociativo\n\n""",
@@ -193,20 +194,20 @@ preguntas_dicc = {
                1. Poco\n\t
                2. Mas o memnos\n\t
                3. Bastante\n\n""",
-        12 :"""Pregunta 12:\n¿Te sie?:\n\t
+        12 :"""Pregunta 12:\n¿Te llama la atencion la mecanica?:\n\t
                1. Poco\n\t
                2. Mucho\n\t
                3. Bastante\n\n""",
-        13 :"""Pregunta 13:\n¿?:\n\t
-               1. No me veo trabajando con tecnologia\n\t
+        13 :"""Pregunta 13:\n¿Te gustaria trabajar con tecnologia?:\n\t
+               1. Me gustaria dedicarme a eso\n\t
                2. Me llama la atencion pero no estoy seguro\n\t
-               3. Me gustaria dedicarme a eso \n\n"""
+               3. Me veo trabajando en otra area\n\n"""
 }
 """
 ============================ Variables ===========================
 """
 
-lista = []
+lista_resultados = []
 
 """
 ====================== Cuerpo del programa =======================
@@ -274,5 +275,5 @@ contador_respuestas(valor_res(valida_respuesta()))
 pausa()
 
 
-indicador_de_carrera(total(lista))
+indicador_de_carrera(total(lista_resultados))
 
