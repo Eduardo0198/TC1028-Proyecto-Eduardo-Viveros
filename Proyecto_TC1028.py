@@ -8,7 +8,7 @@ import os
 =================== funciones auxiliares  ==============================
 """
 
-def valida_respuesta(numero):
+def valida_respuesta():
     """
    (uso de funciones y ciclos)
    recibe: numero
@@ -23,7 +23,7 @@ def valida_respuesta(numero):
     while (numero >=4  or numero == 0):
       print("\n\nRespuesta incorrecta intenta de nuevo \n\t.·¯`(>▂<)´¯·.")
       
-    numero = int(input("\nIngresa el numero de la opcion que deseas: "))
+      numero = int(input("\nIngresa el numero de la opcion que deseas: "))
     
     return numero
 
