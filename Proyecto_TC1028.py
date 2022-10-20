@@ -1,7 +1,11 @@
        
 """
 Proyecto TC1028
-
+Analizador de Ingenerias
+El programa corre una serie de preguntas con 3 posibles 
+opciones y va acumulando los valores de las respuestas del 
+usuario, para al final retornar el resultado e indicarte cual
+es tu mejor ingenieria a estudiar
 """
 
 #Biblioteca
@@ -81,9 +85,9 @@ def total (lista):
    del main, es por eso que ocupo el print, para que el usuario pueda 
    visualizar su resultado.
    """
-   total=0
+   total = 0
    for i in lista:
-      total=total+i
+      total = total + i
     
    print("\t (⌐■_■) El total de puntos es: \t", total)
    
@@ -145,7 +149,7 @@ lista normal llena de variables, estas variables serian el string de la pregunta
 pero analizando mejor el problema conclui que un diccionario arreglaria mejor
 el problema, la forma algo peculiar de imprimir es por que tuve que acomodar 
 los prints en base al formato. Los datos dentro del diccionario se mandan a 
-llamar en el cuerpo cuerpo del progrmama.
+llamar en el cuerpo del progrmama.
 """
 
 preguntas_dicc = {
@@ -206,6 +210,7 @@ preguntas_dicc = {
                2. Me llama la atencion pero no estoy seguro\n\t
                3. Me veo trabajando en otra area\n\n"""
 }
+
 """
 ============================ Variables ===========================
 """
@@ -217,11 +222,11 @@ lista_resultados = []
 """
 
 print("\n\t\t        BIENVENIDO AL")  
-n = ("\n\t(*￣3￣) analizador de ingenierias ( ͡° ͜ʖ ͡°)")
-print(n.upper())
+nombre_proyecto = ("\n\t(*￣3￣) analizador de ingenierias ( ͡° ͜ʖ ͡°)")
+print(nombre_proyecto.upper())
 print("""
   \n       DONDE TE ORIENTAREMOS A DECIDIR CUAL ES LA MEJOR 
-   CARRERA PARA TI POR FAVOR CONTESTA LAS SIGUIENTES PREGUNTAS \n\n""")
+   INGENIERIA PARA TI POR FAVOR CONTESTA LAS SIGUIENTES PREGUNTAS \n\n""")
 
 
 print(preguntas_dicc[1])
@@ -280,3 +285,8 @@ pausa()
 
 indicador_de_carrera(total(lista_resultados))
 
+print("\n\tGracias por participar ผ(•̀_•́ผ)\t")
+
+"""
+Fin del programa 
+"""
