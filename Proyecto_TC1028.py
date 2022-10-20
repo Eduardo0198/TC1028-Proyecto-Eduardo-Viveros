@@ -1,5 +1,8 @@
        
-"############ PROYECTO TC1028 #############"
+"""
+Proyecto TC1028
+
+"""
 
 #Biblioteca
 import os
@@ -69,7 +72,7 @@ def contador_respuestas(res):
 
 def total (lista):
    """
-   (uso de funciones, listas y ciclos)
+   (uso de funciones, listas, ciclos y operadores aritmeticos)
    recibe: Lista
    La funcion recibe una lista de 13 elementos, con ciclo for me encargue
    que este fuera sumando toda la lista dato por dato, logre esto al 
