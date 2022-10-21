@@ -110,21 +110,21 @@ def indicador_de_carrera (total):
     """
     if total <= 130:
        print ("""\t\nTengo tres opciones para ti:\n\n\t
-                     1. Ingeniero Mecanico\n\n\t 
-                     2. Ingeniero Aeronautica\n\n\t
-                     3. Ingeniero Mecatronico\n""")
+                     1. Ingeniero Mecanico （*＾-＾*）\n\n\t 
+                     2. Ingeniero Aeronautica *^____^* \n\n\t
+                     3. Ingeniero Mecatronico o(*￣︶￣*)o \n""")
     
     elif total <= 260:
          print ("""\t\nTengo tres opciones para ti:\n\n\t
-                       1. Ingeniero en Robotica y Sistemas\n\n\t
-                       2. Ingeniero en Sistemas Computacionales \n\n\t
-                       3. Ingeniero en Electronica\n""")
+                       1. Ingeniero en Robotica y Sistemas (￣y▽,￣)╭  \n\n\t
+                       2. Ingeniero en Sistemas Computacionales (～￣▽￣)～\n\n\t
+                       3. Ingeniero en Electronica (〃￣︶￣) \n""")
     
     elif total <= 390:
          print ("""\t\nTengo tres opciones para ti:\n\n\t
-                       1. Ingeniero Quimico\n\n\t
-                       2. Ingeniero en Biotecnologia\n\n\t
-                       3. Ingeniero en Alimentos\n""")
+                       1. Ingeniero Quimico ( •̀ ω •́ )y \n\n\t
+                       2. Ingeniero en Biotecnologia Ψ(￣∀￣)Ψ\n\n\t
+                       3. Ingeniero en Alimentos (╹ڡ╹ ) \n""")
                      
     return total
 
@@ -179,7 +179,7 @@ preguntas_dicc = {
               3. Destacado\n\n""",
         6 :"""Pregunta 6:\n¿En que empresa te ves trabajando?:\n\t
               1. Manufactura y diseño mecanico\n\t
-              2. Big TECH\n\t
+              2. Big Tech\n\t
               3. Industria Aliemtaria\n\n""",
         7 :"""Pregunta 7:\n¿Que palabra te identifica mas?:\n\t
               1. Analitico\n\t
@@ -285,7 +285,7 @@ pausa()
 
 indicador_de_carrera(total(lista_resultados))
 
-print("\n\tGracias por participar ผ(•̀_•́ผ)\t")
+print("\n\t\tGracias por participar ผ(•̀_•́ผ)\n")
 
 """
 Fin del programa 
