@@ -18,40 +18,52 @@ Funcion valida mi respuesta (Entrada)
   Entrada (Escribe("Ingresa el numero de la opcion que deseas: "))
     
   Mientras (entrada >=4  o  entrada == 0):
-    imprime("Respuesta incorrecta intenta de nuevo ·¯`(>▂<)´¯·.")
+    
+   imprime("Respuesta incorrecta intenta de nuevo ·¯`(>▂<)´¯·.")
       
   Entrada (Escribe("Ingresa el numero de la opcion que deseas: "))
     
   Retorna Entrada
+  
+  Fin-funcion
 
 Funcion valor res (respuesta):
   
   Inicio
 
   si respuesta = 1:
-       res = 10
+       
+   res = 10
+  
   si tambien respuesta = 2:
-       res = 20
+       
+   res = 20
+  
   si tambien respuesta = 3:
-       res = 30
+       
+   res = 30
+  
   sino: 
-       res= 0
+      
+   res= 0
     
   retorna res
   Fin-funcion 
 
 
-Funcion contador de respuestas(res):
+#Funcion contador de respuestas(res):
 
   Inicio 
   
   lista = []
+  
   listas.agrega (res)       
+  
   retorna lista
 
   Fin-funcion
 
-Funcion total (lista):
+#Funcion total (lista):
 
    Inicio 
    total = 0
@@ -64,7 +76,7 @@ Funcion total (lista):
    Fin-funcion
 
 
-Funcion indicador de carrera (total):
+#Funcion indicador de carrera (total):
     
   Inicio
 
@@ -89,7 +101,7 @@ Funcion indicador de carrera (total):
   retorna total
   Fin-funcion
 
-Funcion pausa ()
+#Funcion pausa ()
   
   inicio
   Imprime ("Presiona enter para poder continuar") 
