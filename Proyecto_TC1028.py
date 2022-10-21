@@ -110,7 +110,7 @@ def indicador_de_carrera (total):
     """
     if total <= 130:
        print ("""\t\nTengo tres opciones para ti:\n\n\t
-                     1. Ingeniero Mecanico （*＾-＾*）\n\n\t 
+                     1. Ingeniero Mecanico (^///^)\n\n\t 
                      2. Ingeniero Aeronautica *^____^* \n\n\t
                      3. Ingeniero Mecatronico o(*￣︶￣*)o \n""")
     
@@ -123,7 +123,7 @@ def indicador_de_carrera (total):
     elif total <= 390:
          print ("""\t\nTengo tres opciones para ti:\n\n\t
                        1. Ingeniero Quimico ( •̀ ω •́ )y \n\n\t
-                       2. Ingeniero en Biotecnologia Ψ(￣∀￣)Ψ\n\n\t
+                       2. Ingeniero en Biotecnologia \n\n\t
                        3. Ingeniero en Alimentos (╹ڡ╹ ) \n""")
                      
     return total
