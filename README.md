@@ -13,7 +13,7 @@ Pseudocodigo
 
 Inicio
 
-Funcion valida mi respuesta (Entrada)
+##Funcion valida mi respuesta (Entrada)
   
   Entrada (Escribe("Ingresa el numero de la opcion que deseas: "))
     
@@ -27,7 +27,7 @@ Funcion valida mi respuesta (Entrada)
   
   Fin-funcion
 
-Funcion valor res (respuesta):
+##Funcion valor res (respuesta):
   
   Inicio
 
@@ -48,10 +48,11 @@ Funcion valor res (respuesta):
    res= 0
     
   retorna res
+  
   Fin-funcion 
 
 
-#Funcion contador de respuestas(res):
+##Funcion contador de respuestas(res):
 
   Inicio 
   
@@ -63,45 +64,52 @@ Funcion valor res (respuesta):
 
   Fin-funcion
 
-#Funcion total (lista):
+##Funcion total (lista):
 
    Inicio 
+   
    total = 0
    
    Para i en lista:
-      total = total + i
+      
+   total = total + i
+  
   imprime("(⌐■_■) El total de puntos es: ", total)
+   
    Retorna total
    
    Fin-funcion
 
 
-#Funcion indicador de carrera (total):
+##Funcion indicador de carrera (total):
     
   Inicio
 
   Si total <= 130:
-       imprime ("""Tengo tres opciones para ti:
+       
+  imprime ("""Tengo tres opciones para ti:
                      1. Ingeniero Mecanico
                      2. Ingeniero Aeronautica
                      3. Ingeniero Mecatronico""")
     
    si tambien total <= 260:
-         imprime ("""Tengo tres opciones para ti:
+         
+  imprime ("""Tengo tres opciones para ti:
                        1. Ingeniero en Robotica y Sistemas
                        2. Ingeniero en Sistemas Computacionales 
                        3. Ingeniero en Electronica""")
     
   si tambien total <= 390:
-         imprime ("""Tengo tres opciones para ti:
+   imprime ("""Tengo tres opciones para ti:
                        1. Ingeniero Quimico
                        2. Ingeniero en Biotecnologia
                        3. Ingeniero en Alimentos""")
                      
   retorna total
+  
   Fin-funcion
 
-#Funcion pausa ()
+##Funcion pausa ()
   
   inicio
   Imprime ("Presiona enter para poder continuar") 
@@ -116,7 +124,7 @@ Preguntas_diccionario {
                           3 : Pregunta3
 }
 
-#Cuerpo del codigo
+<!-- ------------------------- ##Cuerpo del codigo ------------------------- -->
 
 Imprime (Preguntas_diccionario[1])
 contador_respuestas(valor_res(valida_respuesta()))
@@ -135,7 +143,7 @@ Fin
 
 Nota: Ocupe la libreria os.system en la funcion de pausa.
       Esta libreria se ocupa para borrar la pantalla por
-      completo para dejar la terminal limpia para el sig-
+      completo para dejar la terminal limpia para el sig
       uiente impresion. Descubri la funcion por que tenia
       la necesidad de que mi programa se limpiara cada 
       que cada vez que se respondiera un pregunta, pude 
