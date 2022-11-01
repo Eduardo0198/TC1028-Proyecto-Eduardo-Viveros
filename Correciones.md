@@ -25,4 +25,3 @@ cambio realizado: Corregi el ciclo metiendolo dentro de una funcion, y que solo 
 
 
 Linea de codigo donde se ve el cambio:  30 a 35
-           
